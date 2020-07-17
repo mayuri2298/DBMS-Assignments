@@ -1,0 +1,17 @@
+1.
+select * from supplier order by city desc;
+
+2.
+mysql> select * from parts order by pname,city;
+
+3.
+mysql> select * from supplier where status between 10 and 20;
+
+4.
+mysql> select * from parts where weight<10 or weight>15;
+
+5.
+mysql> select pname from parts where pname like 's%';
+
+6.
+mysql> select pname from parts where city like 'l%';

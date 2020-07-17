@@ -1,0 +1,58 @@
+1.
+mysql> create table semp(empno char(4), empname char(20),basic float(9,2), deptno char(2), depthead char(4));
+
+2.
+mysql> create table sdept(deptno char(2),deptname char(15));
+
+3.
+mysql> insert into sdept values(10,'Development'),(20,'Training');
+
+4.
+mysql> insert into semp values (1001,'SUNIL',6000,10,null);
+
+mysql> insert into semp values(0002, 'HIREN', 8000, 20, null);
+
+mysql> insert into semp values(0003, 'ALI', 4000, 10, 0001 );
+
+mysql> insert into semp values(0004, 'GEORGE', 6000,null, 0002 );
+
+mysql> create table s(`s#`int(4),Sname varchar(10),status char(10),city varchar(10));
+
+mysql> create table p(p#` int(4),Pname varchar(10),color varchar(10),weight float(7,2),city varchar(10));
+
+mysql> create table j(`j#` int(4),jname varchar(10),city varchar(10));
+
+mysql>  create table spj(`s#` int(4),`p#` int(4),`j#` int(4), qty float(7,2));
+
+
+5.
+mysql> select * from s;
+
+6.
+mysql> select `s#`,sname from s;
+
+7.
+mysql> select pname,color from p where CITY='London';
+
+mysql> select * from s where CITY='Paris' or CITY='Athens';
+
+8.
+mysql> select * from s where CITY='London';
+
+9.
+mysql> select * from s where CITY='Paris' or CITY='Athens'
+
+10.
+mysql>  select * from j where CITY='Athens';
+
+11.
+mysql>  select Pname,weight from p where weight between 12 and 14;
+
+12.
+mysql>  select * from s where status>=20;
+
+13.
+mysql> select * from s where city!='London';
+
+14.
+mysql> select city from s;
