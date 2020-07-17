@@ -1,0 +1,8 @@
+1.customer ID is primary key
+
+2.rating is 4th column
+
+3.for row - tuple,entity,opportunity
+   for column - attribute,method
+
+4.Rows of table are not stored sequentially.Rows of table are scattered all over DB server,all rows will always be in ascending order of row address.We didn't know the row address and actual position of row in memory that's why it is  impossible to see the first five rows of a table.
