@@ -1,0 +1,18 @@
+1.mysql> select concat(upper(substr(sname,1,1)),substr(sname,2))from supplier;
+
+2.mysql> select upper(sname) from supplier;
+
+3.mysql> select lower(sname) from supplier;
+
+4.mysql> select lpad(sname,25,' ') from supplier;
+
+5.mysql> select replace(sname,'la','ro')from supplier;
+
+6.mysql> select replace(replace(sname,'l','r'),'a','o') from supplier;
+
+7.mysql> select sname,length(sname) from supplier;
+
+8.mysql> select * from supplier where soundex(sname)=soundex('bloke');
+
+9.mysql> select sname,status from supplier;
+
