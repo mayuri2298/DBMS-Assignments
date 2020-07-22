@@ -1,0 +1,23 @@
+1.mysql> select min(status) from supplier;
+
+2.mysql> select max(weight)from parts;
+
+3.mysql> select avg(weight)from parts;
+
+4.mysql> select sum(quantity) from parts where pid='p1';
+
+5.mysql> select sum(quantity)from parts group by pid;
+
+6.mysql> select avg(quantity)from parts where quantity>800 group by pid;
+
+7.mysql> select pid,max(quantity) from parts where
+
+8.mysql> select count(sname),status from supplier group by status;
+
+9.select distinct city,count(project) from supplier group by city;
+
+10.count(status)-it will give count of only status row not whole whole table row.
+   
+cout(*)-it will give count of total rows in table.
+
+11.mysql> select status,count(status) as count from supplier group by status;
