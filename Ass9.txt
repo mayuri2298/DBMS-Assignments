@@ -1,0 +1,7 @@
+1.mysql> select onum,cname from orders,customers where orders.cnum=customers.cnum;
+
+2.mysql> select sname,cname,onum from salespeople,customers,orders where salespeople.snum=customers.snum and customers.snum=orders.snum;
+
+3.mysql> select cname,sname,comm from customers,salespeople where customers.snum=salespeople.snum and comm>0.12;
+
+4.mysql> select sname,sum(comm),cname,rating from salespeople,customers where salespeople.snum=customers.snum and rating>100 group by comm;
