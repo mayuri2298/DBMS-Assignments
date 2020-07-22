@@ -1,0 +1,11 @@
+1.mysql> select count(*) from orders where odate='1990-10-03';
+
+2.mysql> select count(distinct(city)) from customers where city is not null;
+
+3.mysql> select min(amt) from orders group by cnum;
+
+4.mysql> select cname from customers where cname like 'g%' order by cname;
+
+5.mysql> select city,max(rating) from customers group by city;
+
+6.mysql> select count(distinct(odate)),odate from orders group by odate;

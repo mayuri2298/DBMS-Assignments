@@ -1,0 +1,7 @@
+1.mysql> select onum,orders.snum,comm from salespeople,orders where orders.snum=salespeople.snum;
+
+2.mysql> select city,max(rating) "highest rating is" from customers group by rating;
+
+3.mysql> select rating,cname,cnum from customers order by rating desc;
+
+4.mysql> select count(odate),odate from orders group by odate order by 1 desc;
