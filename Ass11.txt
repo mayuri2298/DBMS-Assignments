@@ -1,0 +1,5 @@
+1.mysql> select * from customers,orders where orders.cnum=customers.cnum and cname='cisneros';
+
+2.mysql> select cname,rating from orders,customers where rating>(select avg(rating) from customers);
+
+3.mysql> select sname,sum(amt)from orders,salespeople group by sname having sum(amt)>(select max(amt)from orders);
