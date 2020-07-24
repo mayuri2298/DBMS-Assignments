@@ -1,0 +1,21 @@
+1.mysql> select sname,qty from supplier,spj where supplier.`s#`=spj.`s#`;
+
+2.mysql> select pname,qty from parts,spj where parts.`p#`=spj.`p#`;
+
+3.mysql> select jname,qty from projects,spj where projects.`j#`=spj.`j#`;
+
+4.mysql> select sname,pname,jname,qty from supplier,parts,projects,spj where supplier.`s#`=spj.`s#` and parts.`p#`=spj.`p#` and projects.`j#`=spj.`j#`;
+
+5.mysql> select sname,pname from supplier,parts,projects where supplier.city=projects.city group by sname;
+
+6.mysql> select pname,qty from parts,spj where color='red' and parts.`p#`=spj.`p#`;
+
+7.mysql> select qty from spj,supplier where supplier.`s#`=spj.`s#` and status=20;
+
+8.mysql> select pname,weight,qty from parts,spj where parts.`p#`=spj.`p#` and weight>15;
+
+9.mysql> select jname,city from projects,spj where projects.`j#`=spj.`j#` and qty>500;
+
+10.mysql> select pname,qty from parts,spj where parts.`p#`=spj.`p#` and weight<15;
+
+11.select a.ename,b.ename from emp b,emp a where a.mgr=b.empno;
