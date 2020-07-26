@@ -1,0 +1,5 @@
+1.mysql> select cname,city,rating 'High Rating' from customers where rating>200 union select cname,city,rating 'Low Rating' from customers where rating<=200;
+
+2.mysql> select snum,sname,cname from salespeople join customers using(snum) where snum in(select snum from customers group by snum having count(snum)>1) order by sname;
+
+3.mysql> select snum from salespeople where city='san jose' union select cnum from customers where city='san jose' union select onum from orders where odate='1990-10-03';

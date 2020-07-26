@@ -1,0 +1,7 @@
+1.mysql> select cname,rating from customers where rating>=any(select rating from customers,salespeople where salespeople.snum=customers.snum and sname='serres');
+
+2.mysql> select sname from salespeople where city!=all(select city from customers);
+
+3.mysql> select * from orders where amt>(select amt from orders where cnum in(select cnum from customers where city='london'));
+
+4.
