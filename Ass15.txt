@@ -1,0 +1,5 @@
+1.mysql> create table multicust as select * from salespeople where snum in(select snum from customers group by snum having count(snum)>1);
+
+2.mysql> delete from customers where cnum in(select cnum from customers where cnum not in(select cnum from orders));
+
+3.mysql> update salespeople set comm=comm*1.20 where snum in(select snum from orders where amt>3000);
