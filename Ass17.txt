@@ -1,0 +1,21 @@
+1.mysql> create table orderrs(
+    -> onum int,
+    -> cnum int,
+    -> snum int,
+    -> odate date not null,
+    -> constraint pk_orderrs primary key(onum,cnum,snum)
+    -> );
+
+2.mysql> create table salespeopple (
+    -> sname varchar(10) check (substr(upper(sname),1,1) between 'A' and 'M'),
+    -> city varchar(10),
+    -> comm float(7,2) not null default 0.10
+    -> );
+
+3.mysql> create table ordeers(
+    -> onum int not null ,
+    -> odate date,
+    -> cnum int not null,
+    -> snum int not null,
+    -> check(onum>cnum and cnum>snum)
+    -> );

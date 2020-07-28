@@ -1,0 +1,9 @@
+1.mysql> select * from orders group by odate;
+
+2.can do using unique or primary key constraint
+
+3.mysql> create index i_odate on orders(odate);
+
+mysql> show indexes from orders;
+
+4.mysql> alter table customers add primary key(rating);

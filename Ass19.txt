@@ -1,0 +1,15 @@
+1.mysql> create view cust_v as select * from customers where rating=(select max(rating) from customers);
+
+mysql> select * from cust_v;
+
+2.mysql> create view sales_v as select city,count(city) from salespeople group by city;
+
+mysql> select * from sales_v;
+
+3.mysql> create view ord_v as  select sname,avg(onum),count(onum) from orders,salespeople where salespeople.snum=orders.snum group by sname;
+
+mysql> select * from ord_v;
+
+4.mysql> create view sales_cust as select sname,cname from customers,salespeople where salespeople.snum=customers.snum;
+
+mysql> select * from sales_cust;
