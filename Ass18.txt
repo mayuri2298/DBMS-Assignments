@@ -1,0 +1,11 @@
+1.
+mysql> CREATE TABLE cityorders SELECT onum,amt,snum,cnum,city FROM orders NATURAL JOIN customers;
+
+mysql> ALTER TABLE cityorders ADD CONSTRAINT onum_fk FOREIGN key(onum) REFERENCES orders(onum);
+
+mysql> DESC cityorders;
+
+2.
+mysql> ALTER TABLE cityorders ADD FOREIGN key(cnum) REFERENCES customers(cnum);
+
+mysql> ALTER TABLE copyorders ADD FOREIGN key(prev) REFERENCES copyorders(onum);
