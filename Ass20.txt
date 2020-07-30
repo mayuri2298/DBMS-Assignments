@@ -1,0 +1,24 @@
+#1.updateable
+
+#2.not updateable
+
+#3.updateable
+
+#4.updateable
+
+2.mysql> create view commissions as select snum,comm from salespeople where comm between 0.12 and 0.20;
+
+mysql> select * from commissions;
+
+3.mysql> create table orders
+    -> (onum int(4),
+    -> amt float(7,2),
+    -> odate date,
+    -> cnum int(4),
+    -> snum int(4),
+    -> constraint pk_onum primary key(onum)
+    -> );
+
+
+mysql> create view entryorders as select * from orders;
+
