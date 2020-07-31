@@ -1,0 +1,21 @@
+1. 
+mysql> GRANT UPDATE ON customers TO Ashish ;
+mysql> UPDATE ON customers FROM Ashish ;
+
+2.
+mysql> GRANT SELECT ON orders TO Ishaan WITH GRANT OPTION;
+mysql> SELECT ON ishaan.orders TO ashish;
+mysql> Grant UPDATE ON ishaan.orders TO ashish;
+
+3. 
+mysql> INSERT ON salespeople FROM Ajita;
+
+4. 
+mysql> CREATE OR REPLACE VIEW range100 AS
+mysql> SELECT * FROM customers
+mysql> WHERE rating BETWEEN 100 AND 500 WITH CHECK OPTION;
+mysql> GRANT UPDATE ON range100 TO Abhijeet;
+
+5. 
+mysql> CREATE OR REPLACE VIEW restrictmin AS SELECT * FROM customers WHERE rating NOT IN (SELECT min(rating) FROM customers);
+mysql> SELECT ON restrictmin TO Vikram;
